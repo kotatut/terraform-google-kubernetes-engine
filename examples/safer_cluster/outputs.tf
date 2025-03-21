@@ -43,12 +43,12 @@ output "client_token" {
 output "ca_certificate" {
   description = "The cluster ca certificate (base64 encoded)"
   value       = module.gke.ca_certificate
+  sensitive   = true
 }
 
 output "service_account" {
   description = "The service account to default running nodes as if not overridden in `node_pools`."
   value       = module.gke.service_account
-  sensitive   = true
 }
 
 output "network_name" {
